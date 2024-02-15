@@ -81,10 +81,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
+          <div class="col-md-4" data-aos="fade-right">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate unde quasi facere libero et doloremque impedit vero, maxime repellat velit.</p>
           </div>
-          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000">
+          <div class="col-md-4" data-aos="fade-left" data-aos-delay="200">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo molestias tenetur, sed autem fugit earum laborum quaerat consectetur beatae vel minima deleniti eius ipsam iure?
           </div>
         </div>
@@ -160,6 +160,70 @@
     </section>
     <!-- AKHIR PROJECT -->
 
+    <!-- GALLERY -->
+    <section id="gallery">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col mb-3">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/galleri/1.jpg" alt="gambar1" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/galleri/2.jpg" alt="gambar2" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/galleri/3.jpg" alt="gambar3" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/galleri/4.jpg" alt="gambar4" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/galleri/5.jpg" alt="gambar5" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/galleri/6.jpg" alt="gambar6" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/galleri/7.jpg" alt="gambar7" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/galleri/8.jpg" alt="gambar8" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/galleri/9.jpg" alt="gambar9" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/galleri/10.jpg" alt="gambar10" class="img-fluid gallery-img" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- AKHIR GALLERY -->
+
     <!-- CONTACT -->
     <section id="contact">
       <div class="container">
@@ -230,7 +294,18 @@
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+      const galleryImage = document.querySelectorAll('.gallery-img');
+
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = 'fade-down';
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+
+      AOS.init({
+        once: true,
+        duration: 2000,
+      });
     </script>
     <!-- AKHIR AOS -->
 

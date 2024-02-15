@@ -10,3 +10,16 @@
 section {
   padding-top: 5rem;
 }
+
+.galleri-img {
+  width: 100%;
+}
+
+/* cara menghilangkan padding yang terdapat dalam row di sebuah section */
+#gallery .row > * {
+  padding: 0;
+}
+/* batas */
+footer {
+  margin-top: -5px;
+}
